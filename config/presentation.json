@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "country_currency": "local",
+  "global_currency": "EUR",
+  "country_order": ["AT", "IT", "ZA", "DK", "NO", "SE"],
+  "default_group": "core",
+  "groups": [
+    {"id": "core", "name": "CORE countries", "entity_ids": ["AT", "IT", "ZA"]},
+    {"id": "noncore", "name": "NON CORE countries", "entity_ids": ["DK", "NO", "SE"]}
+  ],
+  "country_options": {
+    "ZA": {"show_stock_bins": false}
+  },
+  "style": {
+    "font": "Arial",
+    "country_header": "00627A",
+    "global_header": "77B900",
+    "total_fill": "B7DDE8",
+    "refund": "92C43D",
+    "false_positive": "006633",
+    "remaining": "A6A6A6",
+    "unreachable": "D9A72C",
+    "authority_refund": "6CAED6",
+    "other_without_refund": "B4A7D6",
+    "efficiency_amount": "005B63",
+    "efficiency_count": "7E245A",
+    "vintage_old": "0095B6",
+    "vintage_prior": "D9A72C",
+    "vintage_current": "77B900"
+  },
+  "category_labels": {
+    "refund": "With client refund",
+    "false_positive": "False positive balance",
+    "remaining": "To be processed",
+    "unreachable": "Customer not reachable",
+    "authority_refund": "Public authority refund",
+    "other_without_refund": "Other processing without refund"
+  },
+  "comments": {
+    "2026Q2": {
+      "GLOBAL": [],
+      "core": [],
+      "noncore": [],
+      "AT": [],
+      "IT": [],
+      "ZA": [],
+      "DK": [],
+      "NO": [],
+      "SE": []
+    }
+  }
+}

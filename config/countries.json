@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "entities": [
+    {"id": "AT", "name": "Austria", "file": "AUSTRIA.xlsx", "currency": "EUR", "country_aliases": ["Austria"], "profile": "standard", "sheet_prefix": "", "units": 1, "required": true, "enabled": true},
+    {"id": "IT", "name": "Italy", "file": "ITALY.xlsx", "currency": "EUR", "country_aliases": ["ITALY", "Italy"], "profile": "standard", "sheet_prefix": "", "units": 1, "required": true, "enabled": true},
+    {"id": "ZA", "name": "South Africa", "file": "RCS.xlsx", "currency": "ZAR", "currency_aliases": ["R", "ZAR"], "country_aliases": ["South Africa", "RCS"], "profile": "standard", "sheet_prefix": "", "units": 1, "required": true, "enabled": true},
+    {"id": "DK", "name": "Denmark", "file": "NORDICS.xlsx", "currency": "DKK", "country_aliases": ["Denmark"], "profile": "nordics", "sheet_prefix": "DEN_", "units": 1, "required": true, "enabled": true, "requires_cst": true},
+    {"id": "NO", "name": "Norway", "file": "NORDICS.xlsx", "currency": "NOK", "country_aliases": ["Norway"], "profile": "nordics", "sheet_prefix": "NOR_", "units": 1, "required": true, "enabled": true, "requires_cst": true},
+    {"id": "SE", "name": "Sweden", "file": "NORDICS.xlsx", "currency": "SEK", "country_aliases": ["Sweden"], "profile": "nordics", "sheet_prefix": "SWE_", "units": 1, "required": true, "enabled": true, "requires_cst": true}
+  ],
+  "excluded_files": [
+    {"file": "ROMANIA.xlsx", "reason": "Run-off stock-only format: exception adapter deferred from base implementation."},
+    {"file": "BRAZIL.xlsb", "reason": "Run-off binary workbook format: exception adapter deferred from base implementation."}
+  ]
+}

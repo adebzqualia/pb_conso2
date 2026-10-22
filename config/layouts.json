@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "fx": {
+    "file": "Taux.xlsx", "sheet": "Table des taux M", "date_cell": "B2",
+    "currency_column": "A", "rate_column": "E", "header_cell": "E2",
+    "header_contains": "Closing Rate", "first_row": 4,
+    "rate_type": "closing", "quote": "local_per_EUR"
+  },
+  "profiles": {
+    "standard": {
+      "country_cell": "B4", "currency_cell": "B5", "period_cell": "G4",
+      "processed_fields": ["refund", "unreachable", "false_positive"],
+      "stock": {
+        "header_row": 10, "first_column": "C", "last_column": "E", "total_column": "B",
+        "fields": {"total": 11, "processed_source": 12, "refund": 13, "unreachable": 14, "false_positive": 15, "remaining_source": 17}
+      },
+      "flows": {
+        "header_row": 26, "columns": ["C", "D", "E", "F", "G", "H"],
+        "fields": {"amount": 27, "count": 28, "processed_amount": 30, "processed_count": 31, "refund": 33, "unreachable": 34, "false_positive": 35, "remaining_amount_source": 38, "remaining_count_source": 39}
+      },
+      "markers": {"A4": "Country", "A5": "Currency", "A11": "Total amount", "A12": "Contracts processed", "A13": "With client refund", "A14": "Without refund", "A15": "False positive", "A17": "Expected amount", "A27": "Monthly flow", "A28": "Monthly flow in nbr", "A30": "Contracts processed", "A31": "Contracts processed", "A33": "With client refund", "A34": "Without refund", "A35": "False positive"}
+    },
+    "nordics": {
+      "country_cell": "B4", "currency_cell": "B5", "period_cell": "G4",
+      "processed_fields": ["refund", "authority_refund", "other_without_refund"],
+      "stock": {
+        "header_row": 10, "first_column": "C", "last_column": "F", "total_column": "B",
+        "fields": {"total": 11, "processed_source": 12, "refund": 13, "authority_refund": 14, "other_without_refund": 15, "remaining_source": 25}
+      },
+      "flows": {
+        "header_row": 34, "columns": ["C", "D", "E", "F", "G", "H"],
+        "fields": {"amount": 35, "count": 36, "processed_amount": 38, "processed_count": 39, "refund": 41, "authority_refund": 42, "other_without_refund": 43, "remaining_amount_source": 54, "remaining_count_source": 55}
+      },
+      "markers": {"A4": "Country", "A5": "Currency", "A11": "Total amount", "A12": "Contracts processed", "A13": "With client refund", "A14": "With public authorities refund", "A15": "Without refund", "A25": "Expected amount", "A35": "Monthly flow", "A36": "Monthly flow in nbr", "A38": "Contracts processed", "A39": "Contracts processed", "A41": "With client refund", "A42": "With public authorities refund", "A43": "Without refund"}
+    }
+  },
+  "kpi3": {
+    "period_cell": "B1", "label_column": "B", "count_column": "C", "amount_column": "D",
+    "bins_first_row": 6, "bins_last_row": 10, "bins_total_row": 11,
+    "vintages_first_row": 13, "vintages_max_row": 100,
+    "markers": {"A3": "POSITIVE BALANCES", "C4": "Number of contracts", "D4": "Total Amount", "A6": "By step of amount", "A13": "By date of Positive balance"}
+  },
+  "missing_numeric_tokens": ["", "-", "–", "—"],
+  "amount_tolerance": 0.01,
+  "ignore_file_patterns": ["~$*", "Synthese*.xlsx", "Synthèse*.xlsx", "Synthese*.xls", "Synthèse*.xls"]
+}
